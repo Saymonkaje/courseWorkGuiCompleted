@@ -5,7 +5,6 @@ import com.example.demo.DAO.ColumnConstant;
 import com.example.demo.DAO.DBManager;
 import com.example.demo.DAO.QueryConstant;
 import com.example.demo.logger.MyLogger;
-import com.example.demo.controllers.SafeScan;
 import javafx.collections.ObservableList;
 
 import java.util.HashMap;
