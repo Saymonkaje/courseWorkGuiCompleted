@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="526.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ShowingOptionController">
+   <children>
+      <TableView fx:id="outputTable" editable="true" layoutX="4.0" layoutY="55.0" prefHeight="351.0" prefWidth="646.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="22.0" text="Id" />
+          <TableColumn fx:id="sortColumn" editable="false" prefWidth="72.0" text="сорт" />
+            <TableColumn fx:id="weightColumn" onEditCommit="#onWeightEditCommit" prefWidth="80.5" text="вага" />
+            <TableColumn fx:id="priceColumn" onEditCommit="#onPriceEditCommit" prefWidth="109.5" text="ціна за кілограми" />
+            <TableColumn fx:id="packColumn" minWidth="-Infinity" prefWidth="176.0" text="Упаковка">
+               <columns>
+                  <TableColumn fx:id="packNameCol" prefWidth="107.0" text="Назва" />
+                  <TableColumn fx:id="packVolumeCol" minWidth="0.0" prefWidth="53.0" text="Об'єм" />
+               </columns></TableColumn>
+            <TableColumn fx:id="physicalConditionCol" prefWidth="90.5" text="Фізичний стан" />
+            <TableColumn fx:id="runOutOfColumn" prefWidth="110.5" text="Днів до закічення" />
+        </columns>
+      </TableView>
+      <Button fx:id="back" layoutX="713.0" layoutY="480.0" mnemonicParsing="false" onAction="#onBack" prefHeight="25.0" prefWidth="95.0" text="Назад" />
+      <Label fx:id="totalPrice" layoutX="26.0" layoutY="22.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #fafafa;" text="Загальна вартість:" />
+      <Label fx:id="totalWeight" layoutX="284.0" layoutY="22.0" prefHeight="25.0" prefWidth="177.0" style="-fx-background-color: #fafafa;" text="Загальна вага:" />
+      <TextField fx:id="weightEdit" layoutX="103.0" layoutY="423.0" prefHeight="25.0" prefWidth="106.0" promptText="Вага (в грамах)" />
+      <TextField fx:id="priceEdit" layoutX="216.0" layoutY="423.0" prefHeight="25.0" prefWidth="106.0" promptText="Ціна за кілограм" />
+      <ComboBox fx:id="sortComboBox" layoutX="9.0" layoutY="423.0" prefHeight="25.0" prefWidth="88.0" promptText="Сорт" />
+      <ComboBox fx:id="packComboBox" layoutX="330.0" layoutY="423.0" prefHeight="25.0" prefWidth="106.0" promptText="Упаковка" />
+      <ComboBox fx:id="conditionComboBox" layoutX="446.0" layoutY="423.0" prefHeight="25.0" prefWidth="121.0" promptText="Фізичний стан" />
+      <Button fx:id="addNewSort" layoutX="72.0" layoutY="455.0" mnemonicParsing="false" onAction="#onAddNewSort" text="+" />
+      <Button fx:id="addNewPack" layoutX="411.0" layoutY="455.0" mnemonicParsing="false" onAction="#onAddNewPack" text="+" />
+      <Button fx:id="addNewCondition" layoutX="542.0" layoutY="455.0" mnemonicParsing="false" onAction="#addNewCondition" text="+" />
+      <Button fx:id="addNewCoffee" layoutX="580.0" layoutY="423.0" mnemonicParsing="false" onAction="#onAddNewCoffee" text="Додати каву" />
+      <Button fx:id="searchMenuButton" contentDisplay="TOP" layoutX="658.0" layoutY="62.0" mnemonicParsing="false" onAction="#onSearchMenuButton" prefHeight="43.0" prefWidth="136.0" text="Меню налаштування пошуку" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="658.0" layoutY="119.0" mnemonicParsing="false" onAction="#onShowSoonRunOutCoffee" prefHeight="43.0" prefWidth="136.0" text="Вивести каву, що скоро закінчиться" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="658.0" layoutY="181.0" mnemonicParsing="false" onAction="#onShowAllCoffee" prefHeight="43.0" prefWidth="136.0" text="Вивести всю каву" textAlignment="CENTER" wrapText="true" />
+   </children>
+</AnchorPane>

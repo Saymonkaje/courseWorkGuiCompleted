@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="138.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.AddNewSortView">
+   <children>
+      <TextField fx:id="textField" layoutX="49.0" layoutY="35.0" promptText="Назва сорту" />
+      <Button fx:id="addNewSort" layoutX="255.0" layoutY="35.0" mnemonicParsing="false" onAction="#onAddNewSort" prefHeight="25.0" prefWidth="149.0" text="Додати новий сорт" />
+      <Button fx:id="back" layoutX="352.0" layoutY="99.0" mnemonicParsing="false" onAction="#onBack" text="Назад" />
+      <Label layoutX="49.0" layoutY="14.0" text="Введіть назву нового сорту" />
+   </children>
+</AnchorPane>
