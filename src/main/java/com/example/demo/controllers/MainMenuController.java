@@ -4,11 +4,6 @@ import com.example.demo.Application;
 import com.example.demo.Model.Model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class MainMenuController {
 
