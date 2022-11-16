@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.locks.Condition;
 import java.util.logging.Level;
 
 public class DBManager {
@@ -73,25 +72,6 @@ public class DBManager {
         return coffeeList;
     }
 
-    public Integer selectMaxId(String query)
-    {
-        MyLogger.getLogger().log(Level.INFO,"selecting max id");
-        Integer id = 0;
-        try(Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(query)){
-            if(resultSet==null)
-                id = 0;
-            else
-                id = resultSet.getInt(1);
-            //System.out.println(resultSet.getInt(1));
-        } catch (SQLException e) {
-            MyLogger.getLogger().log(Level.SEVERE,"error selecting max id",e);
-            throw new RuntimeException(e);
-        }
-        MyLogger.getLogger().log(Level.INFO,"our max = " +id);
-
-        return id;
-    }
     public Map<Integer, Double> selectAverageConsumption()
     {
         MyLogger.getLogger().log(Level.INFO,"selecting average consumption");
@@ -292,11 +272,31 @@ public class DBManager {
     public void deleteCoffee(int id)
     {
         MyLogger.getLogger().log(Level.INFO,"deleting coffee");
-        try(PreparedStatement preparedStatement = connection.prepareStatement(QueryConstant.deleteCoffeeById)) {
+        deleteById(id,QueryConstant.deleteCoffeeById);
+    }
+    public void deletePack(int id)
+    {
+        MyLogger.getLogger().log(Level.INFO,"deleting coffee");
+        deleteById(id,QueryConstant.deletePackById);
+    }
+    public void deleteSort(int id)
+    {
+        MyLogger.getLogger().log(Level.INFO,"deleting coffee");
+        deleteById(id,QueryConstant.deleteSortById);
+    }
+    public void deleteCondition(int id)
+    {
+        MyLogger.getLogger().log(Level.INFO,"deleting coffee");
+        deleteById(id,QueryConstant.deleteConditionById);
+    }
+    public void deleteById(int id, String query)
+    {
+        MyLogger.getLogger().log(Level.INFO,"deleting something");
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1,id);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            MyLogger.getLogger().log(Level.SEVERE,"error deleting coffee",e);
+            MyLogger.getLogger().log(Level.SEVERE,"error deleting",e);
             throw new RuntimeException(e);
         }
     }

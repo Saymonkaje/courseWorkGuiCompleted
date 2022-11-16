@@ -7,13 +7,13 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Pack{
     private final SimpleStringProperty name;
-    private final SimpleDoubleProperty volume;
+    private final SimpleDoubleProperty weight;
     private final SimpleIntegerProperty id;
 
-    public Pack(String name,double volume,int id)
+    public Pack(String name, double weight, int id)
     {
         this.name = new SimpleStringProperty(name);
-        this.volume = new SimpleDoubleProperty(volume);
+        this.weight = new SimpleDoubleProperty(weight);
         this.id = new SimpleIntegerProperty(id);
     }
 
@@ -25,12 +25,12 @@ public class Pack{
         return name;
     }
 
-    public double getVolume() {
-        return volume.get();
+    public double getWeight() {
+        return weight.get();
     }
 
-    public SimpleDoubleProperty volumeProperty() {
-        return volume;
+    public SimpleDoubleProperty weightProperty() {
+        return weight;
     }
 
 
@@ -44,12 +44,12 @@ public class Pack{
 
     @Override
     public String toString() {
-        return "Id "+id.get()+ ", Назва: "+ name.get() + ", об'єм=" + volume.get();
+        return "Id "+id.get()+ ", Назва: "+ name.get() + ", об'єм=" + weight.get();
     }
 
     public String toStringWithoutId()
     {
-        return "Назва: "+ name +", об'єм: "+ volume;
+        return "Назва: "+ name +", об'єм: "+ weight;
     }
 
 }

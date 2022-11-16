@@ -128,9 +128,8 @@ public class SearchMenuView {
     @FXML
     void initialize() {
         instance = this;
-        ObservableList<Sort> sorts =ShowingOptionController.getInstance().getSorts();
         sortComboBox.setButtonCell(new PromptCell<>(sortComboBox.getPromptText()));
-        sortComboBox.setItems(sorts);
+        sortComboBox.setItems(ShowingOptionController.getInstance().getSorts());
         packComboBox.setButtonCell(new PromptCell<>(packComboBox.getPromptText()));
         packComboBox.setItems(ShowingOptionController.getInstance().getPacks());
         conditionComboBox.setButtonCell(new PromptCell<>(conditionComboBox.getPromptText()));

@@ -13,7 +13,6 @@ public class Application extends javafx.application.Application {
    private static Scene sortScene;
    private static Scene conditionScene;
    private static Scene packScene;
-
     @Override
     public void start(Stage stage) throws IOException {
         mainStage = stage;
@@ -21,18 +20,18 @@ public class Application extends javafx.application.Application {
                 (Application.class.getResource
                         ("hello-view.fxml"));
         mainMenu = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
+        stage.setTitle("Фургон кави");
         stage.setScene(mainMenu);
         stage.show();
-        fxmlLoader = new FXMLLoader(Application.class.getResource("showingOptionView.fxml"));
-        displayMenu = new Scene(fxmlLoader.load());
-        fxmlLoader = new FXMLLoader(Application.class.getResource("addNewSortView.fxml"));
-        sortScene = new Scene(fxmlLoader.load());
-        fxmlLoader = new FXMLLoader(Application.class.getResource("addNewConditionView.fxml"));
-        conditionScene = new Scene(fxmlLoader.load());
-        fxmlLoader = new FXMLLoader(Application.class.getResource("addNewPackView.fxml"));
-        packScene = new Scene(fxmlLoader.load());
+        displayMenu = getSceneFromFXML("showingOptionView.fxml");
+        sortScene = getSceneFromFXML("addNewSortView.fxml");
+        conditionScene =  getSceneFromFXML("addNewConditionView.fxml");
+        packScene = getSceneFromFXML("addNewPackView.fxml");
+    }
 
+    private Scene getSceneFromFXML (String fxmlFile) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource(fxmlFile));
+        return new Scene(fxmlLoader.load());
     }
 
     public static Scene getMainMenu() {

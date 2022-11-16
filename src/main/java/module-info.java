@@ -11,8 +11,6 @@ module com.example.demo {
     opens com.example.demo.Model to javafx.fxml;
     exports com.example.demo.logger;
     opens com.example.demo.logger to javafx.fxml;
-    exports com.example.demo.View;
-    opens com.example.demo.View to javafx.fxml;
     exports com.example.demo.controllers;
     opens com.example.demo.controllers to javafx.fxml;
     exports com.example.demo.customCells;

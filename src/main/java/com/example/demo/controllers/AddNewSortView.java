@@ -1,14 +1,14 @@
 package com.example.demo.controllers;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import com.example.demo.Application;
 import com.example.demo.Model.Model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class AddNewSortView {
 

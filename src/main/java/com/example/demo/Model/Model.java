@@ -5,7 +5,6 @@ import com.example.demo.DAO.ColumnConstant;
 import com.example.demo.DAO.DBManager;
 import com.example.demo.DAO.QueryConstant;
 import com.example.demo.logger.MyLogger;
-import com.example.demo.controllers.SafeScan;
 import javafx.collections.ObservableList;
 
 import java.util.HashMap;
@@ -40,16 +39,6 @@ public class Model {
         MyLogger.getLogger().log(Level.INFO,"getting condition map");
         return database.selectCondition();
     }
-    private Coffee checkCoffeeId (List<Coffee> list, int id)
-    {
-        MyLogger.getLogger().log(Level.INFO,"coffee id check");
-        for(Coffee entity:list)
-        {
-         if(entity.getId()==id)
-             return entity;
-        }
-        return null;
-    }
     public void loadNewCoffee(int pack_id,int sort_id,int condition_id,double weight,double price)
     {
         MyLogger.getLogger().log(Level.INFO,"loading new coffee");
@@ -58,9 +47,7 @@ public class Model {
 
     public List<Pack> showPacks()
     {
-
-        List<Pack> list = database.selectPack();
-        return list;
+        return database.selectPack();
     }
 
     public int insertPack(String pack_name, double volume)
@@ -79,15 +66,31 @@ public class Model {
         return database.insertCondition(condition);
     }
 
-    public boolean consumptionCoffee(double newWeight, Coffee coffee)
+    public void consumptionCoffee(double newWeight, Coffee coffee)
     {
         MyLogger.getLogger().log(Level.INFO,"adding info about coffee consumption");
-        if(newWeight > 0) {
-            database.updateCoffeeWeight(coffee.getId(),newWeight);
-            return true;
-        }
-        database.deleteCoffee(coffee.getId());
-        return true;
+        database.updateCoffeeWeight(coffee.getId(),newWeight);
+    }
+    public void deletePack(int id)
+    {
+        MyLogger.getLogger().log(Level.INFO,"deleting pack");
+        database.deletePack(id);
+    }
+    public void deleteSort(int id)
+    {
+        MyLogger.getLogger().log(Level.INFO,"deleting sort");
+        database.deleteSort(id);
+    }
+    public void deleteCondition(int id)
+    {
+        MyLogger.getLogger().log(Level.INFO,"deleting condition");
+        database.deleteCondition(id);
+    }
+
+    public void deleteCoffee(int id)
+    {
+        MyLogger.getLogger().log(Level.INFO,"deleting coffee");
+        database.deleteCoffee(id);
     }
 
     public void setNewPrice(double newPrice, Coffee coffee)
@@ -138,12 +141,12 @@ public class Model {
     }
 
 
-    public double showTotalPrice()
+    public double getTotalPrice()
     {
         MyLogger.getLogger().log(Level.INFO,"showing total price");
         return database.selectTotalPrice();
     }
-    public double showTotalWeight()
+    public double getTotalWeight()
     {
         MyLogger.getLogger().log(Level.INFO,"showing total weight");
         return database.selectTotalWeight();
