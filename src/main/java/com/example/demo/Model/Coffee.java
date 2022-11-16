@@ -16,15 +16,6 @@ public class Coffee {
 
     private final Sort sort;
 
-//    @Override
-//    public String toString() {
-//        return  "id: " + id+
-//                ", вага: " + weight +
-//                ", сорт: " + sort +
-//                ", ціна за кілограм: " + pricePerKilogram +
-//                ", упаковка: " + pack.toStringWithoutId() +
-//                ", фізичний стан: " + physicalCondition;
-//    }
 
     public Coffee(Sort sort, double pricePerKilogram, Pack pack, PhysicalCondition physicalCondition, int id, double weight) {
 
@@ -90,6 +81,16 @@ public class Coffee {
                 && Objects.equals(sort, coffee.sort)
                 && Objects.equals(pack, coffee.pack)
                 && physicalCondition == coffee.physicalCondition;
+    }
+
+    @Override
+    public String toString() {
+        return "id=" + id.get() +
+                ", вага = " + weight.get() +
+                ", ціна за кілограм = " + pricePerKilogram.get() +
+                ", упаковка: " + pack.get() +
+                ", фізичний стан= " + physicalCondition +
+                ", сорт = " + sort;
     }
 
     @Override

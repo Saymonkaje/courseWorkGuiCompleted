@@ -1,228 +1,28 @@
-лист. 12, 2022 4:29:21 ПП com.example.demo.DAO.DBManager <init>
+лист. 16, 2022 9:31:28 ДП com.example.demo.DAO.DBManager <init>
 INFO: getting connection with database
-лист. 12, 2022 4:29:21 ПП com.example.demo.DAO.DBManager selectCoffee
+лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectCoffee
 INFO: selecting coffee
-лист. 12, 2022 4:29:22 ПП com.example.demo.DAO.DBManager selectAverageConsumption
+лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectAverageConsumption
 INFO: selecting average consumption
-лист. 12, 2022 4:29:22 ПП com.example.demo.DAO.DBManager selectCoffee
+лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectCoffee
 INFO: selecting coffee
-лист. 12, 2022 4:29:22 ПП com.example.demo.Model.Model showTotalPrice
+лист. 16, 2022 9:31:29 ДП com.example.demo.Model.Model showTotalPrice
 INFO: showing total price
-лист. 12, 2022 4:29:22 ПП com.example.demo.DAO.DBManager selectSum
+лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectSum
 INFO: selecting sum
-лист. 12, 2022 4:29:22 ПП com.example.demo.Model.Model showTotalWeight
+лист. 16, 2022 9:31:29 ДП com.example.demo.Model.Model showTotalWeight
 INFO: showing total weight
-лист. 12, 2022 4:29:22 ПП com.example.demo.DAO.DBManager selectSum
+лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectSum
 INFO: selecting sum
-лист. 12, 2022 4:29:22 ПП com.example.demo.DAO.DBManager selectPack
+лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectPack
 INFO: selecting pack
-лист. 12, 2022 4:29:22 ПП com.example.demo.Model.Model getConditionList
+лист. 16, 2022 9:31:29 ДП com.example.demo.Model.Model getConditionList
 INFO: getting condition map
-лист. 12, 2022 4:29:22 ПП com.example.demo.DAO.DBManager selectCondition
+лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectCondition
 INFO: selecting condition
-лист. 12, 2022 4:29:22 ПП com.example.demo.DAO.DBManager selectIdAndName
+лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectIdAndName
 INFO: selecting id and name
-лист. 12, 2022 4:29:22 ПП com.example.demo.Model.Model getSortList
+лист. 16, 2022 9:31:29 ДП com.example.demo.Model.Model getSortList
 INFO: getting sort map
-лист. 12, 2022 4:29:22 ПП com.example.demo.DAO.DBManager selectIdAndName
+лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectIdAndName
 INFO: selecting id and name
-лист. 12, 2022 4:29:31 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:31 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:29:31 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:31 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:29:31 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:31 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:29:31 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:32 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:32 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:29:32 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:32 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:29:32 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:32 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:29:32 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:42 ПП com.example.demo.Model.Model searchCoffee
-INFO: searching coffee
-лист. 12, 2022 4:29:42 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:42 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:29:42 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:42 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:29:42 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:42 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:29:42 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:49 ПП com.example.demo.Model.Model searchCoffee
-INFO: searching coffee
-лист. 12, 2022 4:29:49 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:49 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:29:49 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:49 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:29:49 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:49 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:29:49 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:53 ПП com.example.demo.Model.Model searchCoffee
-INFO: searching coffee
-лист. 12, 2022 4:29:53 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:53 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:29:53 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:53 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:29:53 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:53 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:29:53 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:59 ПП com.example.demo.Model.Model searchCoffee
-INFO: searching coffee
-лист. 12, 2022 4:29:59 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:59 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:29:59 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:29:59 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:29:59 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:29:59 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:29:59 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:07 ПП com.example.demo.Model.Model searchCoffee
-INFO: searching coffee
-лист. 12, 2022 4:30:07 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:07 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:30:07 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:07 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:30:07 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:07 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:30:07 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:18 ПП com.example.demo.Model.Model searchCoffee
-INFO: searching coffee
-лист. 12, 2022 4:30:18 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:18 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:30:18 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:18 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:30:18 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:18 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:30:18 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:36 ПП com.example.demo.Model.Model searchCoffee
-INFO: searching coffee
-лист. 12, 2022 4:30:36 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:36 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:30:36 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:36 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:30:36 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:36 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:30:36 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:44 ПП com.example.demo.Model.Model searchCoffee
-INFO: searching coffee
-лист. 12, 2022 4:30:44 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:44 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:30:44 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:44 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:30:44 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:44 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:30:44 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:50 ПП com.example.demo.Model.Model searchCoffee
-INFO: searching coffee
-лист. 12, 2022 4:30:50 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:50 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:30:50 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:50 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:30:50 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:50 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:30:50 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:54 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:54 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:30:54 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:54 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:30:54 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:54 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:30:54 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:55 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:55 ПП com.example.demo.DAO.DBManager selectAverageConsumption
-INFO: selecting average consumption
-лист. 12, 2022 4:30:55 ПП com.example.demo.DAO.DBManager selectCoffee
-INFO: selecting coffee
-лист. 12, 2022 4:30:55 ПП com.example.demo.Model.Model showTotalPrice
-INFO: showing total price
-лист. 12, 2022 4:30:55 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
-лист. 12, 2022 4:30:55 ПП com.example.demo.Model.Model showTotalWeight
-INFO: showing total weight
-лист. 12, 2022 4:30:55 ПП com.example.demo.DAO.DBManager selectSum
-INFO: selecting sum
