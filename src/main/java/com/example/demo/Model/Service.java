@@ -12,19 +12,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
-public class Model {
+public class Service {
 
     DBManager database;
-    private static Model instance;
+    private static Service instance;
 
-    public static Model getInstance() {
+    public static Service getInstance() {
         if(instance == null)
-            instance = new Model(DBManager.getInstance());
+            instance = new Service(DBManager.getInstance());
         return instance;
     }
 
 
-    private Model(DBManager database)
+    private Service(DBManager database)
     {
         this.database = database;
     }

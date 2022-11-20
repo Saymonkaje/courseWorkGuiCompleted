@@ -7,7 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 
-public class DeleteMenuView {
+public class DeleteMenuController {
 
     @FXML
     private ComboBox<Coffee> coffeeComboBox;
@@ -31,7 +31,7 @@ public class DeleteMenuView {
         Coffee coffee = coffeeComboBox.getValue();
         if(coffee == null)
             return;
-        Model.getInstance().deleteCoffee(coffee.getId());
+        Service.getInstance().deleteCoffee(coffee.getId());
         ShowingOptionController.instance.updateCoffees(QueryConstant.selectAllCoffee);
         coffeeComboBox.setItems(ShowingOptionController.getInstance().coffees);
     }
@@ -41,7 +41,8 @@ public class DeleteMenuView {
         PhysicalCondition ph =  conditionComboBox.getValue();
         if(ph == null)
             return;
-        Model.getInstance().deleteCondition(ph.getId());
+        Service.getInstance().deleteCondition(ph.getId());
+        ShowingOptionController.getInstance().initConditionBox();
         conditionComboBox.setItems(ShowingOptionController.instance.getPhysicalConditions());
     }
 
@@ -50,7 +51,8 @@ public class DeleteMenuView {
         Pack pack =  packComboBox.getValue();
         if(pack == null)
             return;
-        Model.getInstance().deletePack(pack.getId());
+        Service.getInstance().deletePack(pack.getId());
+        ShowingOptionController.getInstance().initPackBox();
         packComboBox.setItems(ShowingOptionController.getInstance().getPacks());
     }
 
@@ -59,7 +61,8 @@ public class DeleteMenuView {
         Sort sort = sortComboBox.getValue();
         if(sort == null)
             return;
-        Model.getInstance().deleteSort(sort.getId());
+        Service.getInstance().deleteSort(sort.getId());
+        ShowingOptionController.getInstance().initSortBox();
         sortComboBox.setItems(ShowingOptionController.instance.getSorts());
     }
 

@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.Application;
-import com.example.demo.Model.Model;
+import com.example.demo.Model.Service;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AddNewSortView {
+public class AddNewSortController {
 
     @FXML
     private ResourceBundle resources;
@@ -35,8 +35,8 @@ public class AddNewSortView {
             textField.setText("ВИ ПОМИЛИЛИСЯ В ЖИТТІ");
             return;
         }
-        Model model = Model.getInstance();
-        model.insertSort(newSort);
+        Service service = Service.getInstance();
+        service.insertSort(newSort);
         ShowingOptionController.getInstance().initSortBox();
         textField.setText("");
     }

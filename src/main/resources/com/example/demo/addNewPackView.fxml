@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="155.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.AddNewPackView">
+<AnchorPane prefHeight="155.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.AddNewPackController">
     <children>
         <TextField fx:id="packNameField" layoutX="14.0" layoutY="35.0" promptText="Назва упаковки" />
         <Button fx:id="addNewSort" layoutX="255.0" layoutY="35.0" mnemonicParsing="false" onAction="#onAddNewSort" prefHeight="25.0" prefWidth="149.0" text="Додати нову упаковку" />

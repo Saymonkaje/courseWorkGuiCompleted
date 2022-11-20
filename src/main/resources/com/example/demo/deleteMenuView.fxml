@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.DeleteMenuView">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.DeleteMenuController">
    <children>
       <ComboBox fx:id="packComboBox" layoutX="46.0" layoutY="74.0" prefWidth="150.0" promptText="Упаковка" />
       <ComboBox fx:id="coffeeComboBox" layoutX="385.0" layoutY="288.0" prefWidth="150.0" promptText="Кава" />

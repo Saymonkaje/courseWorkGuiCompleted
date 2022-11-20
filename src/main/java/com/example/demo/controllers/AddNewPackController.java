@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.Application;
-import com.example.demo.Model.Model;
+import com.example.demo.Model.Service;
 import com.example.demo.logger.MyLogger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 
 import java.util.logging.Level;
 
-public class AddNewPackView {
+public class AddNewPackController {
 
     @FXML
     private Button addNewSort;
@@ -42,8 +42,8 @@ public class AddNewPackView {
             packNameField.setText("ВИ ПОМИЛИЛИСЯ В ЖИТТІ");
             return;
         }
-        Model model = Model.getInstance();
-        model.insertPack(packName,volume);
+        Service service = Service.getInstance();
+        service.insertPack(packName,volume);
         ShowingOptionController.getInstance().initPackBox();
         packVolumeField.setText("");
         packNameField.setText("");

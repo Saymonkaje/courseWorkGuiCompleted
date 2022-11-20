@@ -15,7 +15,7 @@
           <TableColumn fx:id="idColumn" prefWidth="22.0" text="Id" />
           <TableColumn fx:id="sortColumn" editable="false" prefWidth="72.0" text="Сорт" />
             <TableColumn fx:id="weightColumn" onEditCommit="#onWeightEditCommit" prefWidth="80.5" text="Вага" />
-            <TableColumn fx:id="priceColumn" onEditCommit="#onPriceEditCommit" prefWidth="109.5" text="Ціна за кілограми" />
+            <TableColumn fx:id="priceColumn" onEditCommit="#onPriceEditCommit" prefWidth="109.5" text="Ціна за кілограм $" />
             <TableColumn fx:id="packColumn" minWidth="-Infinity" prefWidth="176.0" text="Упаковка">
                <columns>
                   <TableColumn fx:id="packNameCol" prefWidth="107.0" text="Назва" />
@@ -29,7 +29,7 @@
       <Label fx:id="totalPrice" layoutX="26.0" layoutY="22.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #fafafa;" text="Загальна вартість:" />
       <Label fx:id="totalWeight" layoutX="284.0" layoutY="22.0" prefHeight="25.0" prefWidth="177.0" style="-fx-background-color: #fafafa;" text="Загальна вага:" />
       <TextField fx:id="weightEdit" layoutX="136.0" layoutY="423.0" prefHeight="25.0" prefWidth="106.0" promptText="Вага (в грамах)" />
-      <TextField fx:id="priceEdit" layoutX="255.0" layoutY="423.0" prefHeight="25.0" prefWidth="106.0" promptText="Ціна за кілограм" />
+      <TextField fx:id="priceEdit" layoutX="255.0" layoutY="423.0" prefHeight="25.0" prefWidth="106.0" promptText="Ціна за кілограм $" />
       <ComboBox fx:id="sortComboBox" layoutX="9.0" layoutY="423.0" prefHeight="25.0" prefWidth="112.0" promptText="Сорт" />
       <ComboBox fx:id="packComboBox" layoutX="376.0" layoutY="423.0" prefHeight="25.0" prefWidth="127.0" promptText="Упаковка" />
       <ComboBox fx:id="conditionComboBox" layoutX="516.0" layoutY="423.0" prefHeight="25.0" prefWidth="121.0" promptText="Фізичний стан" />

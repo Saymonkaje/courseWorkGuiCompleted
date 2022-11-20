@@ -1,28 +1,28 @@
-лист. 16, 2022 9:31:28 ДП com.example.demo.DAO.DBManager <init>
+лист. 21, 2022 12:58:31 ДП com.example.demo.DAO.DBManager <init>
 INFO: getting connection with database
-лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectCoffee
+лист. 21, 2022 12:58:32 ДП com.example.demo.DAO.DBManager selectCoffee
 INFO: selecting coffee
-лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectAverageConsumption
+лист. 21, 2022 12:58:32 ДП com.example.demo.DAO.DBManager selectAverageConsumption
 INFO: selecting average consumption
-лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectCoffee
+лист. 21, 2022 12:58:32 ДП com.example.demo.DAO.DBManager selectCoffee
 INFO: selecting coffee
-лист. 16, 2022 9:31:29 ДП com.example.demo.Model.Model showTotalPrice
+лист. 21, 2022 12:58:32 ДП com.example.demo.Model.Service getTotalPrice
 INFO: showing total price
-лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectSum
+лист. 21, 2022 12:58:32 ДП com.example.demo.DAO.DBManager selectSum
 INFO: selecting sum
-лист. 16, 2022 9:31:29 ДП com.example.demo.Model.Model showTotalWeight
+лист. 21, 2022 12:58:32 ДП com.example.demo.Model.Service getTotalWeight
 INFO: showing total weight
-лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectSum
+лист. 21, 2022 12:58:32 ДП com.example.demo.DAO.DBManager selectSum
 INFO: selecting sum
-лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectPack
+лист. 21, 2022 12:58:32 ДП com.example.demo.DAO.DBManager selectPack
 INFO: selecting pack
-лист. 16, 2022 9:31:29 ДП com.example.demo.Model.Model getConditionList
+лист. 21, 2022 12:58:32 ДП com.example.demo.Model.Service getConditionList
 INFO: getting condition map
-лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectCondition
+лист. 21, 2022 12:58:32 ДП com.example.demo.DAO.DBManager selectCondition
 INFO: selecting condition
-лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectIdAndName
+лист. 21, 2022 12:58:32 ДП com.example.demo.DAO.DBManager selectIdAndName
 INFO: selecting id and name
-лист. 16, 2022 9:31:29 ДП com.example.demo.Model.Model getSortList
+лист. 21, 2022 12:58:32 ДП com.example.demo.Model.Service getSortList
 INFO: getting sort map
-лист. 16, 2022 9:31:29 ДП com.example.demo.DAO.DBManager selectIdAndName
+лист. 21, 2022 12:58:32 ДП com.example.demo.DAO.DBManager selectIdAndName
 INFO: selecting id and name

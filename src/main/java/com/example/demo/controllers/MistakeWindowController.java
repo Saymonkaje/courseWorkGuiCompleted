@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MistakeWindow {
+public class MistakeWindowController {
 
     public static Stage stage;
     private static String errorText;
@@ -20,7 +20,7 @@ public class MistakeWindow {
 
     public static void openMistakeWindow(String errorText)
     {
-        MistakeWindow.errorText = errorText;
+        MistakeWindowController.errorText = errorText;
         Parent root;
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("mistakeWindow.fxml"));
         try {

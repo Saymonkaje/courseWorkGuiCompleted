@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.Application;
-import com.example.demo.Model.Model;
+import com.example.demo.Model.Service;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -18,7 +18,7 @@ public class MainMenuController {
 
     @FXML
     void initialize() {
-        Model model = Model.getInstance();
+        Service service = Service.getInstance();
     }
 
 }

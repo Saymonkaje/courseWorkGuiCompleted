@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="180.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.AddNewConditionView">
+<AnchorPane prefHeight="180.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.AddNewConditionController">
    <children>
       <Button fx:id="addNewCondition" layoutX="299.0" layoutY="78.0" mnemonicParsing="false" onAction="#onAddNewCondition" text="Додати новий фізичний стан кави" />
       <TextField fx:id="textField" layoutX="36.0" layoutY="78.0" promptText="Введіть фізичний стан" />

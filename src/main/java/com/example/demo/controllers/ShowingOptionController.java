@@ -35,7 +35,7 @@ public class ShowingOptionController {
     public Button addNewPack;
     public Button addNewCondition;
     public Button addNewCoffee;
-    Model model;
+    Service service;
     ObservableList<Coffee> coffees;
     ObservableList<Pack> packs;
     ObservableList<Sort> sorts;
@@ -101,24 +101,24 @@ public class ShowingOptionController {
 
     public void updateCoffees(String query)
     {
-        coffees=model.getCoffee(query);
+        coffees= service.getCoffee(query);
         computeDaysToRunOut();
         String priceText  = totalPrice.getText();
         String weightText  = totalWeight.getText();
-        totalPrice.setText(priceText.substring(0,priceText.indexOf(":")+1) +" "+ model.getTotalPrice());
-        totalWeight.setText(weightText.substring(0,weightText.indexOf(":")+1) +" "+ model.getTotalWeight());
+        totalPrice.setText(priceText.substring(0,priceText.indexOf(":")+1) +" "+ service.getTotalPrice());
+        totalWeight.setText(weightText.substring(0,weightText.indexOf(":")+1) +" "+ service.getTotalWeight());
         outputTable.setItems(coffees);
 
     }
     private void computeDaysToRunOut()
     {
-        coffeeConsumptionMap = model.showTimeToRunOutOfCoffee();
+        coffeeConsumptionMap = service.showTimeToRunOutOfCoffee();
     }
     public void initTable()
     {
         instance = this;
-        if(model==null)
-            model = Model.getInstance();
+        if(service ==null)
+            service = Service.getInstance();
         Callback<TableColumn<Coffee,Double>, TableCell<Coffee,Double>> cellFactory =
                 p -> {
                     TextFieldTableCell<Coffee, Double> tx = new TextFieldTableCell<>();
@@ -144,7 +144,7 @@ public class ShowingOptionController {
         packVolumeCol.setCellValueFactory(cellData-> new ObservableValueBase<>() {
             @Override
             public Double getValue() {
-                return cellData.getValue().getPack().getWeight();
+                return cellData.getValue().getPack().getVolume();
             }
         });
         physicalConditionCol.setCellValueFactory(cellDate->
@@ -161,8 +161,8 @@ public class ShowingOptionController {
 
     public void initComboBox()
     {
-        if(model==null)
-            model = Model.getInstance();
+        if(service ==null)
+            service = Service.getInstance();
         initPackBox();
         initConditionBox();
         initSortBox();
@@ -170,27 +170,27 @@ public class ShowingOptionController {
 
     public void initPackBox()
     {
-        packs = FXCollections.observableArrayList(model.showPacks());
+        packs = FXCollections.observableArrayList(service.showPacks());
         packComboBox.setItems(packs);
         packComboBox.setButtonCell(new PromptCell<>(packComboBox.getPromptText()));
     }
 
     public void initSortBox()
     {
-        sorts = FXCollections.observableArrayList(model.getSortList());
+        sorts = FXCollections.observableArrayList(service.getSortList());
         sortComboBox.setItems(sorts);
         sortComboBox.setButtonCell(new PromptCell<>(sortComboBox.getPromptText()));
     }
 
     public void initConditionBox()
     {
-        physicalConditions = FXCollections.observableArrayList(model.getConditionList());
+        physicalConditions = FXCollections.observableArrayList(service.getConditionList());
         conditionComboBox.setItems(physicalConditions);
         conditionComboBox.setButtonCell(new PromptCell<>(conditionComboBox.getPromptText()));
     }
     @FXML
     void initialize() {
-        model = Model.getInstance();
+        service = Service.getInstance();
         coffees = FXCollections.observableArrayList();
         coffeeConsumptionMap = FXCollections.observableMap(new HashMap<>());
         initTable();
@@ -218,23 +218,21 @@ public class ShowingOptionController {
         String stWeight = weightEdit.getText();
         String stPrice = priceEdit.getText();
         Pack pack = packComboBox.getValue();
-        System.out.println(sort);
-        System.out.println(pack);
         PhysicalCondition physicalCondition = conditionComboBox.getValue();
         if(!validateInputCoffee(stWeight,stPrice,sort,pack,physicalCondition)) {
-            MistakeWindow.openMistakeWindow("Ви не ввели усі дані для додавання кави");
+            MistakeWindowController.openMistakeWindow("Ви не ввели усі дані для додавання кави");
             return;
         }
         double weight = Double.parseDouble(stWeight);
         double price = Double.parseDouble(stPrice);
-        ObservableList<Coffee> alreadyExist = model.getCoffee(model.searchCoffee(sort,pack,physicalCondition,null,null));
+        ObservableList<Coffee> alreadyExist = service.getCoffee(service.searchCoffee(sort,pack,physicalCondition,null,null));
         if(!alreadyExist.isEmpty())
         {
-            model.consumptionCoffee(alreadyExist.get(0).getWeight()+weight,alreadyExist.get(0));
-            model.setNewPrice((alreadyExist.get(0).getPricePerKilogram()+price)/2,alreadyExist.get(0));
+            service.consumptionCoffee(alreadyExist.get(0).getWeight()+weight,alreadyExist.get(0));
+            service.setNewPrice((alreadyExist.get(0).getPricePerKilogram()+price)/2,alreadyExist.get(0));
         }
         else
-            model.loadNewCoffee(pack.getId(),sort.getId(), physicalCondition.getId(), weight,price);
+            service.loadNewCoffee(pack.getId(),sort.getId(), physicalCondition.getId(), weight,price);
         updateCoffees(QueryConstant.selectAllCoffee);
         computeDaysToRunOut();
         conditionComboBox.setValue(null);
@@ -251,10 +249,13 @@ public class ShowingOptionController {
         Double weight = coffeeDoubleCellEditEvent.getNewValue();
         if(weight<0)
         {
-            System.out.println("ВИ ВИКОРИСТАЛИ БІЛЬШЕ КАВИ ЧИМ БУЛО, ВИ РОЗУМІЄТЕ, ЩО ВИ НАКОЇЛИ????");
+            MistakeWindowController.openMistakeWindow("ВИ ВИКОРИСТАЛИ БІЛЬШЕ КАВИ ЧИМ БУЛО, ВИ РОЗУМІЄТЕ, ЩО ВИ НАКОЇЛИ????");
+            MyLogger.getLogger().log(Level.INFO,"was input incorrect weight");
+            coffeeDoubleCellEditEvent.getRowValue().setWeight(coffeeDoubleCellEditEvent.getOldValue());
+            outputTable.refresh();
             return;
         }
-        model.consumptionCoffee(weight,coffeeDoubleCellEditEvent.getRowValue());
+        service.consumptionCoffee(weight,coffeeDoubleCellEditEvent.getRowValue());
         coffees.get(coffees.indexOf(coffeeDoubleCellEditEvent.getRowValue())).setWeight(weight);
         updateCoffees(QueryConstant.selectAllCoffee);
     }
@@ -266,13 +267,13 @@ public class ShowingOptionController {
             System.out.println("wrong INput");
             return;
         }
-        model.setNewPrice(price,coffeeDoubleCellEditEvent.getRowValue());
+        service.setNewPrice(price,coffeeDoubleCellEditEvent.getRowValue());
         coffees.get(coffees.indexOf(coffeeDoubleCellEditEvent.getRowValue())).setPricePerKilogram(price);
         updateCoffees(QueryConstant.selectAllCoffee);
     }
 
     public void onSearchMenuButton(ActionEvent actionEvent) {
-        SearchMenuView.openSearchMenu();
+        SearchMenuController.openSearchMenu();
     }
 
     public void onShowSoonRunOutCoffee(ActionEvent actionEvent) {

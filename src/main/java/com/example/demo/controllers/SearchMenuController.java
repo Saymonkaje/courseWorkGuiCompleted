@@ -2,7 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.Application;
 import com.example.demo.DAO.QueryConstant;
-import com.example.demo.Model.Model;
+import com.example.demo.Model.Service;
 import com.example.demo.Model.Pack;
 import com.example.demo.Model.PhysicalCondition;
 import com.example.demo.Model.Sort;
@@ -22,13 +22,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.logging.Level;
 
-public class SearchMenuView {
+public class SearchMenuController {
 
     private  static Stage stage;
     ObservableList<String> comparisonSymbol;
-    private static SearchMenuView instance;
+    private static SearchMenuController instance;
 
-    public static SearchMenuView getInstance() {
+    public static SearchMenuController getInstance() {
         if(instance==null)
             openSearchMenu();
         return instance;
@@ -74,7 +74,7 @@ public class SearchMenuView {
         if(sort==null && pack==null&&physicalCondition==null&&priceComparison==null&&weightComparison==null)
             query = QueryConstant.selectAllCoffee;
         else
-            query =  Model.getInstance().searchCoffee(sort,pack,physicalCondition,weightComparison,priceComparison);
+            query =  Service.getInstance().searchCoffee(sort,pack,physicalCondition,weightComparison,priceComparison);
         ShowingOptionController.getInstance().updateCoffees(query);
         clearAllTextFields();
     }
