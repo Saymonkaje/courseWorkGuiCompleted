@@ -1,5 +1,6 @@
 package com.example.demo.DAO;
 
+import com.example.demo.Application;
 import com.example.demo.Model.Coffee;
 import com.example.demo.Model.Pack;
 import com.example.demo.Model.PhysicalCondition;
@@ -8,32 +9,41 @@ import com.example.demo.logger.MyLogger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.logging.Level;
+
+
 
 public class DBManager {
     private static DBManager instance;
-    private static final String URL ="jdbc:mysql://localhost:3306/course_work" ;
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "root";
     private final Connection connection;
+    private final String propertiesFile = "DBConfig.properties";
 
     private DBManager ()
     {
+
+        InputStream stream = Application.class.getResourceAsStream(propertiesFile);
+        Properties properties = new Properties();
+        try {
+            properties.load(stream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        String URL = properties.getProperty("dbURL");
+        String USERNAME = properties.getProperty("dbUser");
+        String PASSWORD = properties.getProperty("dbPassword");
         MyLogger.getLogger().log(Level.INFO,"getting connection with database");
         try {
-            connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
             MyLogger.getLogger().log(Level.SEVERE,"error connecting with database",e);
             e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
-
     public static DBManager getInstance() {
         if(instance==null)
             instance = new DBManager();

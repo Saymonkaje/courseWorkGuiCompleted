@@ -4,7 +4,6 @@ module com.example.demo {
     requires java.logging;
     requires java.sql;
 
-
     opens com.example.demo to javafx.fxml;
         exports com.example.demo;
     exports com.example.demo.Model;
